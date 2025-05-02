@@ -1,30 +1,22 @@
-// script.js
-
-// Pega o formulário e o campo de mensagens
 const form = document.getElementById('message-form');
 const input = document.getElementById('user-input');
 const messages = document.getElementById('messages');
 
-// Escuta o envio do formulário
 form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede a página de recarregar
+    event.preventDefault();
 
     const userMessage = input.value.trim();
-    if (userMessage === '') return; // Não envia mensagens vazias
+    if (userMessage === '') return;
 
-    // Adiciona a mensagem do usuário no chat
     addMessage('Você', userMessage);
 
-    // Responde baseado no que o usuário escreveu
     setTimeout(() => {
         botResponse(userMessage);
-    }, 500); // Pequeno delay para parecer mais "real"
+    }, 500);
 
-    // Limpa o campo de input
     input.value = '';
 });
 
-// Função para adicionar uma mensagem no chat
 function addMessage(sender, text, isExpandable = false) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message');
@@ -41,7 +33,7 @@ function addMessage(sender, text, isExpandable = false) {
         const button = document.createElement('button');
         button.textContent = 'Ver mais';
         button.style.cursor = 'pointer';
-        button.style.color = '#3399ff'; // azul claro
+        button.style.color = '#3399ff';
         button.style.textDecoration = 'underline';
         button.style.background = 'none';
         button.style.border = 'none';
@@ -50,7 +42,7 @@ function addMessage(sender, text, isExpandable = false) {
         button.style.marginLeft = '10px';
 
         button.onclick = () => {
-            expandHistory(messageElement); // agora passamos o elemento pra função
+            expandHistory(messageElement);
         };
 
         messageElement.appendChild(button);
@@ -58,11 +50,9 @@ function addMessage(sender, text, isExpandable = false) {
 
     messages.appendChild(messageElement);
 
-    // Sempre rola para baixo
     messages.scrollTop = messages.scrollHeight;
 }
 
-// Nova função para expandir a história
 function expandHistory(messageElement) {
     const messageText = messageElement.querySelector('.message-text');
     messageText.innerHTML = `
@@ -72,43 +62,49 @@ function expandHistory(messageElement) {
         Jogadores como KSCERATO, yuurih e arT ajudaram a construir a identidade ousada da organização. Hoje, a FURIA é símbolo de garra e paixão no CS mundial! 🇧🇷👊
     `;
     const button = messageElement.querySelector('button');
-    if (button) button.remove(); // remove o botão depois de expandir
+    if (button) button.remove();
 }
 
-let isFirstMessage = true; // Variável para verificar se é a primeira mensagem
+let isFirstMessage = true;
 
 function botResponse(userText) {
     let response = '';
     const texto = userText.toLowerCase();
 
     if (isFirstMessage) {
-        // Primeira mensagem do bot
-        response = '🎉 Olá, admirador(a) do nosso time de CS da FURIA!!! 🐆\n\n';
-        response += 'Aqui é o chat Furioso, responsável por tudo que está acontecendo com o nosso querido time de CS! 🎮🔥\n\n';
-        response += 'Quer ficar por dentro de tudo? Aqui está o nosso menu interativo: \n\n';
-        response += '🔹 **História**: Conheça a trajetória do nosso time de CS! \n';
-        response += '🔹 **Jogos**: Acompanhe a agenda de jogos e nossos adversários! \n';
-        response += '🔹 **Ao Vivo**: Veja o status atual dos jogos ao vivo! \n';
-        response += '🔹 **Torcida**: Entre no chat da torcida e interaja com outros fãs! 🎉\n';
-        response += '🔹 **Notícias**: Fique por dentro das últimas novidades da FURIA! 📰\n';
-        response += '🔹 **Quiz**: Teste seus conhecimentos sobre a FURIA! 🤓\n\n';
-        response += 'Digite qualquer uma das palavras-chave ou escolha uma opção acima para começar! \n';
-        response += '🚀 Divirta-se e mostre seu apoio à FURIA! ⚡';
+        response = '🎉 Olá, admirador(a) do nosso time de CS da FURIA!!! 🐆<br><br>';
+        response += 'Aqui é o chat Furioso, responsável por tudo que está acontecendo com o nosso querido time de CS! 🎮🔥<br><br>';
+        response += 'Quer ficar por dentro de tudo? Aqui está o nosso menu interativo:<br><br>';
+        response += '🔹 <strong>/historia</strong>: Conheça a trajetória do nosso time de CS!<br>';
+        response += '🔹 <strong>/jogos</strong>: Acompanhe a agenda de jogos e nossos adversários!<br>';
+        response += '🔹 <strong>/aovivo</strong>: Veja o status atual dos jogos ao vivo!<br>';
+        response += '🔹 <strong>/torcida</strong>: Entre no chat da torcida e interaja com outros fãs! 🎉<br>';
+        response += '🔹 <strong>/noticias</strong>: Fique por dentro das últimas novidades da FURIA! 📰<br>';
+        response += '🔹 <strong>/quiz</strong>: Teste seus conhecimentos sobre a FURIA! 🤓<br><br>';
+        response += 'Digite qualquer uma das palavras-chave ou escolha uma opção acima para começar!<br>';
+        response += '🚀 Divirta-se e mostre seu apoio à FURIA! ⚡';        
 
-        isFirstMessage = false; // Marca que já enviamos a primeira mensagem
-    } else if (texto.includes('jogos')) {
+        isFirstMessage = false;
+    } else if (texto.includes('/jogos')) {
         response = '📅 Próximo jogo: FURIA vs NAVI - 28/04 às 17h! (Status: Em andamento)';
-    } else if (texto.includes('ao vivo')) {
-        // Simulação de status de jogo
+    } else if (texto.includes('/aovivo')) {
         response = '🚨 Status ao vivo: FURIA 16-12 NAVI. Faltando 3 minutos para o fim!';
-    } else if (texto.includes('notícias')) {
+    } else if (texto.includes('/noticias')) {
         response = '📰 Última notícia: FURIA avança para as semifinais do campeonato!';
-    } else if (texto.includes('história')) {
+    } else if (texto.includes('/historia')) {
         response = '🏆 História da FURIA:\nFundada em 2017, a FURIA rapidamente se tornou uma das maiores forças do CS:GO mundial. Jogadores como KSCERATO e yuurih brilharam em Majors! 🐆🔥';
         addMessage('FURIA Bot', response, true);
         return;
+    } else if(texto.includes('/comandos')){
+        response = 'Lista da Comandos:<br>';
+        response += '/jogos<br>';
+        response += '/historia<br>';
+        response += '/aovivo<br>';
+        response += '/torcida<br>';
+        response += '/noticias<br>';
+        response += '/quiz<br>';
     } else {
-        response = '🤔 Não entendi... você pode tentar perguntar sobre: jogos, status, notícias!';
+        response = '🤔 Esse comando não existe! Para saber nossa lista de comandos digite <strong>/comandos<strong>';
     }
     
 
@@ -118,6 +114,5 @@ function botResponse(userText) {
 const clearButton = document.getElementById('clear-chat');
 
 clearButton.addEventListener('click', function () {
-    messages.innerHTML = ''; // Limpa todas as mensagens
-    isFirstMessage = true;   // Volta a permitir a saudação inicial
+    messages.innerHTML = '';
 });
