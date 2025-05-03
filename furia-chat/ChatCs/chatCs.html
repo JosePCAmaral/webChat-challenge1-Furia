@@ -16,7 +16,6 @@
     <main>
         <div id="chat-container">
             <div id="messages">
-                <!-- Mensagens aparecem aqui -->
             </div>
 
             <form id="message-form">
@@ -24,10 +23,26 @@
                 <button type="submit">Enviar</button>
             </form>
         </div>
+
         <div id="clear-chat-container">
             <button id="clear-chat">Limpar Conversa</button>
         </div>
     </main>
+
+    <div id="chatTorcida" class="chat-torcida">
+        <div class="chat-header">
+          💬 Chat da Torcida FURIA
+          <button class="fechar-chat" onclick="fecharChatTorcida()">✖</button>
+        </div>
+        <div id="mensagensChat" class="chat-mensagens">
+          <p><strong>Fã1:</strong> Vamos FURIA!!! 🔥</p>
+          <p><strong>Fã2:</strong> O arT tá jogando demais 😎</p>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="inputMensagem" placeholder="Digite sua mensagem...">
+          <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+      </div>      
 
     <footer id="footer">
         <p>Desenvolvido por <strong>José Pedro Cunha do Amaral</strong></p>

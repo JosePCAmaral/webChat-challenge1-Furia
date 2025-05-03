@@ -1,4 +1,3 @@
-<!-- index.html (landing page) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,11 +7,29 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  
   <div class="container">
     <img src="../assets/img/logoFuria.png" alt="Logo FURIA" class="logo">
     <h1>Chat Oficial dos Fãs de CS:GO da FURIA 🐆🔥</h1>
     <p>Converse, descubra as novidades, veja os jogos ao vivo e interaja com a torcida!</p>
-    <a href="../ChatCs/chatCs.html" class="btn">Entrar no Chat</a>
+    <button class="btn" id="abrirModal">Entrar no Chat</button>
   </div>
+
+  <div class="modal-bg" id="modalNome">
+    <div class="modal">
+      <h2>🎉 Digite seu nome</h2>
+      <form id="formNome">
+        <input type="text" id="nomeInput" placeholder="Seu nome aqui..." required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="loader" class="loader hidden">
+    <div class="spinner"></div>
+    <p>Carregando Chat da FURIA...</p>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>

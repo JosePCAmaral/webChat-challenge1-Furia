@@ -1,0 +1,130 @@
+{
+    "boas_vindas": {
+        "texto": "🎉 Olá, admirador(a) da FURIA!!! 🐆<br><br>Estou aqui para te ajudar a ficar por dentro de tudo sobre o nosso time de CS:GO! Escolha uma opção para começar:<br><br>🔹<strong>/historia</strong>: Conheça a trajetória do nosso time de CS!<br>🔹<strong>/jogos</strong>: Acompanhe a agenda de jogos e nossos adversários!<br>🔹<strong>/aovivo</strong>: Veja o status atual dos jogos ao vivo!<br>🔹<strong>/torcida</strong>: Entre no chat da torcida e interaja com outros fãs! 🎉<br>🔹<strong>/noticias</strong>: Fique por dentro das últimas novidades da FURIA! 📰<br>🔹<strong>/quiz</strong>: Teste seus conhecimentos sobre a FURIA! 🤓<br><br>Digite qualquer uma das palavras-chave para começar!<br>🚀 Divirta-se e mostre seu apoio à FURIA! ⚡"
+    },
+
+    "historia": {
+        "preview": "📜 História:<br><br>A FURIA Esports foi fundada em 2017. A equipe de CS:GO logo ganhou destaque no cenário internacional.",
+        "historiaCompleta": "📜 História Completa:<br><br>A FURIA Esports nasceu em 2017 com o sonho de revolucionar os esportes eletrônicos no Brasil. Apostando em um elenco jovem e extremamente agressivo, o time de CS:GO rapidamente chamou atenção.<br><br>Em 2019, a equipe despontou no cenário internacional, com grandes campanhas no ECS Season 7 Finals e no DreamHack Masters Dallas, derrotando times tradicionais.<br><br>Jogadores como KSCERATO, yuurih e arT ajudaram a construir a identidade ousada da organização. Hoje, a FURIA é símbolo de garra e paixão no CS mundial! 🇧🇷👊"
+    },
+
+    "jogos": {
+        "preview": "🗓️ Próximo jogo: FURIA vs NAVI - 28/04 às 17h!",
+        "all": "🗓️ Próximo jogo: FURIA vs NAVI - 28/04 às 17h!!<br><br> Jogos Futuros da FURIA:<br><br>🔸 10/05 - FURIA vs The MongolZ - 1hr (PGL Astana 2025)<br>"
+    },
+
+    "quiz": {
+        "perguntas": [
+            {
+            "pergunta": "Em que ano a FURIA foi fundada?",
+            "alternativas": ["2015", "2017", "2019", "2020"],
+            "correta": "2017"
+            },
+            {
+            "pergunta": "Qual jogador é conhecido por ser o IGL (In-Game Leader) da FURIA?",
+            "alternativas": ["yuurih", "KSCERATO", "arT", "drop"],
+            "correta": "arT"
+            },
+            {
+            "pergunta": "Qual dessas competições a FURIA venceu?",
+            "alternativas": [
+                "ESL One Cologne",
+                "DreamHack Masters Dallas",
+                "PGL Major Stockholm",
+                "IEM Katowice"
+            ],
+            "correta": "DreamHack Masters Dallas"
+            },
+            {
+            "pergunta": "Quem é conhecido por ser o AWPer principal da FURIA?",
+            "alternativas": ["arT", "yuurih", "saffee", "chelo"],
+            "correta": "saffee"
+            },
+            {
+            "pergunta": "Em que país a FURIA mantém uma gaming house internacional?",
+            "alternativas": ["Alemanha", "Canadá", "Estados Unidos", "Suécia"],
+            "correta": "Estados Unidos"
+            },
+            {
+            "pergunta": "Qual foi o melhor ranking da FURIA no HLTV?",
+            "alternativas": ["Top 5", "Top 10", "Top 15", "Top 20"],
+            "correta": "Top 5"
+            },
+            {
+            "pergunta": "Qual o estilo de jogo mais conhecido da FURIA?",
+            "alternativas": ["Passivo", "Estrategista", "Agressivo", "Lento"],
+            "correta": "Agressivo"
+            },
+            {
+            "pergunta": "Qual jogador da FURIA é famoso pelo clutch em momentos decisivos?",
+            "alternativas": ["KSCERATO", "arT", "yuurih", "saffee"],
+            "correta": "KSCERATO"
+            },
+            {
+            "pergunta": "Qual evento marcou a primeira grande aparição internacional da FURIA?",
+            "alternativas": [
+                "IEM Rio Major",
+                "DreamHack Open Rio",
+                "ECS Season 7 Finals",
+                "ESL Challenger Melbourne"
+            ],
+            "correta": "ECS Season 7 Finals"
+            },
+            {
+            "pergunta": "Qual desses jogadores NÃO fez parte do elenco principal da FURIA em 2023?",
+            "alternativas": ["drop", "KSCERATO", "coldzera", "yuurih"],
+            "correta": "coldzera"
+            },
+            {
+            "pergunta": "Qual o nome do fundador da FURIA?",
+            "alternativas": ["Guilherme Gamer", "Jaime Pádua", "Gabriel Toledo", "Carlos Oliveira"],
+            "correta": "Jaime Pádua"
+            },
+            {
+            "pergunta": "Em qual cidade brasileira a FURIA foi fundada?",
+            "alternativas": ["São Paulo", "Belo Horizonte", "Rio de Janeiro", "Curitiba"],
+            "correta": "São Paulo"
+            },
+            {
+            "pergunta": "Quantos jogadores compõem o elenco ativo de CS:GO?",
+            "alternativas": ["3", "5", "6", "4"],
+            "correta": "5"
+            }
+        ]
+    },
+
+    "noticias": {
+        "preview": "📰 Última notícia: FURIA anuncia novo analista tático para reforçar equipe de CS:GO!",
+        "todas": [
+            {
+                "titulo": "FURIA contrata novo analista tático para 2025",
+                "conteudo": "A FURIA anunciou a chegada de Lucas 'brainz' Oliveira como novo analista tático. O profissional chega com a missão de aprimorar o desempenho da equipe nos grandes torneios do ano."
+            },
+            {
+                "titulo": "KSCERATO atinge marca histórica de 10.000 eliminações",
+                "conteudo": "Durante a PGL Astana 2025, KSCERATO alcançou a impressionante marca de 10.000 eliminações em partidas oficiais, tornando-se um dos maiores jogadores da história da organização."
+            },
+            {
+                "titulo": "FURIA confirma participação no IEM Dallas 2025",
+                "conteudo": "A equipe brasileira garantiu sua vaga no IEM Dallas e promete representar o país com raça e agressividade, características marcantes do estilo de jogo da FURIA."
+            }
+        ]
+    },
+
+    "aovivo": {
+        "status": "🎮 Jogo ao vivo: FURIA vs NAVI - 1º mapa em andamento! 🔥<br> Placar: FURIA 10 x 8 NAVI (Mirage)<br><br>Atualize para ver novos dados a qualquer momento."
+    },
+
+    "torcida": {
+        "mensagem": "💬 Bem-vindo ao chat da torcida FURIA!<br><br>Converse com outros fãs, mande seu apoio e vibre a cada round!<br><br><em>(💬 Acesse o chat da torcida no Discord: <a href='https://discord.gg/furia' target='_blank'>Clique aqui</a> 🔥)</em>"
+    },
+
+
+    "comandos": {
+        "texto": "Esses são os nossos comandos:<br><br> <strong>/historia<strong><br> <strong>/jogos<strong><br> <strong>/noticias<strong><br> <strong>/quiz<strong><br> <strong>/aovivo<strong><br> <strong>/torcida<strong><br>"
+    },
+
+    "comando_invalido": {
+        "texto": "Desculpe, não entendi.<br> Tente <strong>/comandos.<strong>"
+    }
+}  
