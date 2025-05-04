@@ -186,8 +186,28 @@ clearButton.addEventListener('click', function () {
 carregarRespostas();
 carregarMensagensSalvas();
 
+let intervaloTorcida;
+
 function abrirChatTorcida() {
     document.getElementById("chatTorcida").style.display = "flex";
+    const mensagens = [
+        "🐆 VAMOO FURIA!!",
+        "🔥 EU ACREDITO!",
+        "💣 O KADEELO TÁ INSANO!",
+        "🚀 CONFIA!",
+        "🎯 JÁ É NOSSA ESSA!"
+    ];
+
+    let index = 0;
+    const mensagensChat = document.getElementById("mensagensChat");
+
+    intervaloTorcida = setInterval(() => {
+        const msg = document.createElement("p");
+        msg.innerHTML = `<strong>Fã aleatório:</strong> ${mensagens[index]}`;
+        mensagensChat.appendChild(msg);
+        mensagensChat.scrollTop = mensagensChat.scrollHeight;
+        index = (index + 1) % mensagens.length;
+    }, 5000);
 }
 
 function enviarMensagem() {
@@ -201,17 +221,10 @@ function enviarMensagem() {
         mensagens.scrollTop = mensagens.scrollHeight;
 
         input.value = "";
-
-        // Simula uma resposta automática de outro fã
-        setTimeout(() => {
-            const resposta = document.createElement("p");
-            resposta.innerHTML = `<strong>Fã aleatório:</strong> Bora apoiar! 💪`;
-            mensagens.appendChild(resposta);
-            mensagens.scrollTop = mensagens.scrollHeight;
-        }, 1000);
     }
 }
 
 function fecharChatTorcida() {
     document.getElementById("chatTorcida").style.display = "none";
+    clearInterval(intervaloTorcida);
 }
